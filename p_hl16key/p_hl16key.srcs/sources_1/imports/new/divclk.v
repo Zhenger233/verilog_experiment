@@ -30,5 +30,4 @@ module divclk(input clk,output clk_ms,output btnclk);
               btnclk_cnt = btnclk_cnt+1'b1;
          end
      end
- 
  endmodule
