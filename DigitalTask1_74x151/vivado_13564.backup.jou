@@ -1,0 +1,101 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Dec  2 12:34:59 2019
+# Process ID: 13564
+# Current directory: D:/project/vvd/DigitalTask1_74x151
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13700 D:\project\vvd\DigitalTask1_74x151\DigitalTask1_74x151.xpr
+# Log file: D:/project/vvd/DigitalTask1_74x151/vivado.log
+# Journal file: D:/project/vvd/DigitalTask1_74x151\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/project/vvd/DigitalTask1_74x151/DigitalTask1_74x151.xpr
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/project/vvd/DigitalTask1_74x151/DigitalTask1_74x151.srcs/sim_1/new/sim2.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 D:/project/vvd/DigitalTask1_74x151/DigitalTask1_74x151.srcs/sim_1/new/sim2.v
+launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+synth_design -rtl -name rtl_1
+launch_simulation
+launch_simulation
+source sim1.tcl
+add_bp {D:/project/vvd/DigitalTask1_74x151/DigitalTask1_74x151.srcs/sources_1/new/dsbjq_x151.v} 29
+remove_bps -file {D:/project/vvd/DigitalTask1_74x151/DigitalTask1_74x151.srcs/sources_1/new/dsbjq_x151.v} -line 29
+close_sim
+launch_simulation
+source sim1.tcl
+close_sim
+launch_simulation
+source sim1.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_design
+refresh_design
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_sim
+launch_simulation
+source sim1.tcl
+close_sim
+launch_simulation
+source sim1.tcl
+close_sim
+launch_simulation
+source sim1.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_sim
+launch_simulation
+source sim1.tcl
+close_sim
+launch_simulation
+launch_simulation
+source sim1.tcl
+close_sim
+launch_simulation
+source sim1.tcl
+close_sim
+launch_simulation
+source sim1.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_sim
+launch_simulation
+source sim1.tcl
+close_sim
+launch_simulation
+source sim1.tcl
+close_sim
+launch_simulation
+source sim1.tcl
+update_compile_order -fileset sources_1
+current_design rtl_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source sim1.tcl
+close_sim
+launch_simulation
+source sim1.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+refresh_design
+close_sim

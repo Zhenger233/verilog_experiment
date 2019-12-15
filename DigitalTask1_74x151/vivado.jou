@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Dec  9 22:57:10 2019
+# Process ID: 14400
+# Current directory: D:/project/vvd/DigitalTask1_74x151
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16204 D:\project\vvd\DigitalTask1_74x151\DigitalTask1_74x151.xpr
+# Log file: D:/project/vvd/DigitalTask1_74x151/vivado.log
+# Journal file: D:/project/vvd/DigitalTask1_74x151\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/project/vvd/DigitalTask1_74x151/DigitalTask1_74x151.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source sim1.tcl
+close_sim
+synth_design -rtl -name rtl_1

@@ -1,0 +1,120 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Dec  9 22:57:10 2019
+# Process ID: 14400
+# Current directory: D:/project/vvd/DigitalTask1_74x151
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16204 D:\project\vvd\DigitalTask1_74x151\DigitalTask1_74x151.xpr
+# Log file: D:/project/vvd/DigitalTask1_74x151/vivado.log
+# Journal file: D:/project/vvd/DigitalTask1_74x151\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/project/vvd/DigitalTask1_74x151/DigitalTask1_74x151.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 817.809 ; gain = 107.566
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/project/vvd/DigitalTask1_74x151/DigitalTask1_74x151.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'sim1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/project/vvd/DigitalTask1_74x151/DigitalTask1_74x151.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj sim1_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/project/vvd/DigitalTask1_74x151/DigitalTask1_74x151.srcs/sources_1/new/dsbjq_x151.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module f
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/project/vvd/DigitalTask1_74x151/DigitalTask1_74x151.srcs/sources_1/new/x151.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module x151
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/project/vvd/DigitalTask1_74x151/DigitalTask1_74x151.srcs/sim_1/new/sim1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim1
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/project/vvd/DigitalTask1_74x151/DigitalTask1_74x151.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto c8b2c6f9663c4b83b6bf92e0d640671a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sim1_behav xil_defaultlib.sim1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.x151
+Compiling module xil_defaultlib.f
+Compiling module xil_defaultlib.sim1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot sim1_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/project/vvd/DigitalTask1_74x151/DigitalTask1_74x151.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "sim1_behav -key {Behavioral:sim_1:Functional:sim1} -tclbatch {sim1.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source sim1.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'sim1_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 847.738 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tftg256-3
+Top: f
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 970.098 ; gain = 102.250
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'f' [D:/project/vvd/DigitalTask1_74x151/DigitalTask1_74x151.srcs/sources_1/new/dsbjq_x151.v:37]
+INFO: [Synth 8-638] synthesizing module 'x151' [D:/project/vvd/DigitalTask1_74x151/DigitalTask1_74x151.srcs/sources_1/new/x151.v:32]
+INFO: [Synth 8-256] done synthesizing module 'x151' (1#1) [D:/project/vvd/DigitalTask1_74x151/DigitalTask1_74x151.srcs/sources_1/new/x151.v:32]
+INFO: [Synth 8-256] done synthesizing module 'f' (2#1) [D:/project/vvd/DigitalTask1_74x151/DigitalTask1_74x151.srcs/sources_1/new/dsbjq_x151.v:37]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1009.445 ; gain = 141.598
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1009.445 ; gain = 141.598
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tftg256-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/project/vvd/DigitalTask1_74x151/DigitalTask1_74x151.srcs/constrs_1/new/xdc1.xdc]
+Finished Parsing XDC File [D:/project/vvd/DigitalTask1_74x151/DigitalTask1_74x151.srcs/constrs_1/new/xdc1.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:54 ; elapsed = 00:00:41 . Memory (MB): peak = 1327.625 ; gain = 459.777
+8 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:00:41 . Memory (MB): peak = 1327.625 ; gain = 459.777
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  9 23:40:59 2019...
