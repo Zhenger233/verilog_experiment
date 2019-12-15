@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-module v1(input clk,input [11:0] sw,input [3:0] col,output [3:0] row,output [15:0] led,output [7:0] seg,output [5:0] an);
+module v1(input clk,input [11:0] sw,input [3:0] col,output [3:0] row,output [15:0] led,output [7:0] seg,output [5:0] an,output beep);
  wire clk_ms,clk_20ms;
  wire [15:0] btnout;
  reg [15:0]b1=0,b2=0;
@@ -8,12 +8,13 @@ module v1(input clk,input [11:0] sw,input [3:0] col,output [3:0] row,output [15:
  reg [51:0] queue=0;
  reg [3:0] flag=0;
  reg[4:0] i=0;
+ reg [3:0]temp=0;
+ reg music=0;
  parameter [51:0]num=52'h4101040608102;
-reg [3:0]temp=0;
 ip_disp a(.clk(clk),.rst(0),.dispdata(showdat),.seg(seg),.an(an));
 divclk my_divclk(.clk(clk),.clk_ms(clk_ms),.btnclk(clk_20ms));    //调用分频模块
 v_ajxd uut_ajxd(.clk(clk_ms),.btn_clk(clk_20ms),.col(col),.row(row),.btn_out(btnout));
- 
+beep(music,clk,btnout,beep);
 always @ (posedge clk_ms)
 begin
     led[9:0]<=btnout[9:0];
@@ -31,7 +32,7 @@ begin
                 end
                 else flag=(i==2?1:0);
                 showdat={flag,showdat[19:0]};
-                if(flag==13)begin led[11]=1;flag=0;end else led[11]=0;
+                if(flag==13)begin led[11]=1;flag=0;music=1;end else begin led[11]=0; music=0;end
             end
         end
     end

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Sun Dec 15 13:00:46 2019
+| Date             : Sun Dec 15 21:14:22 2019
 | Host             : Zhenger running 64-bit major release  (build 9200)
 | Command          : report_power -file v1_power_routed.rpt -pb v1_power_summary_routed.pb -rpx v1_power_routed.rpx
 | Design           : v1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.830        |
+| Total On-Chip Power (W)  | 1.277        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.760        |
-| Device Static (W)        | 0.070        |
+| Dynamic (W)              | 1.206        |
+| Device Static (W)        | 0.071        |
 | Effective TJA (C/W)      | 4.9          |
-| Max Ambient (C)          | 81.0         |
-| Junction Temperature (C) | 29.0         |
+| Max Ambient (C)          | 78.8         |
+| Junction Temperature (C) | 31.2         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.342 |      699 |       --- |             --- |
-|   LUT as Logic |     0.251 |      377 |     20800 |            1.81 |
-|   CARRY4       |     0.044 |       20 |      8150 |            0.25 |
-|   Register     |     0.042 |      236 |     41600 |            0.57 |
+| Slice Logic    |     0.575 |      965 |       --- |             --- |
+|   LUT as Logic |     0.425 |      486 |     20800 |            2.34 |
+|   CARRY4       |     0.081 |       45 |      8150 |            0.55 |
+|   Register     |     0.063 |      334 |     41600 |            0.80 |
 |   BUFG         |     0.006 |        3 |        32 |            9.38 |
-|   Others       |     0.000 |        8 |       --- |             --- |
-| Signals        |     0.399 |      609 |       --- |             --- |
-| I/O            |     0.020 |       39 |       170 |           22.94 |
-| Static Power   |     0.070 |          |           |                 |
-| Total          |     0.830 |          |           |                 |
+|   Others       |     0.000 |       10 |       --- |             --- |
+| Signals        |     0.611 |      814 |       --- |             --- |
+| Block RAM      |     0.000 |      0.5 |        50 |            1.00 |
+| I/O            |     0.020 |       40 |       170 |           23.53 |
+| Static Power   |     0.071 |          |           |                 |
+| Total          |     1.277 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.771 |       0.760 |      0.011 |
+| Vccint    |       1.000 |     1.218 |       1.206 |      0.012 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -135,13 +136,14 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-------------+-----------+
-| Name        | Power (W) |
-+-------------+-----------+
-| v1          |     0.760 |
-|   a         |     0.338 |
-|   my_divclk |     0.355 |
-|   uut_ajxd  |     0.010 |
-+-------------+-----------+
++------------------+-----------+
+| Name             | Power (W) |
++------------------+-----------+
+| v1               |     1.206 |
+|   a              |     0.346 |
+|   my_divclk      |     0.362 |
+|   nolabel_line17 |     0.425 |
+|   uut_ajxd       |     0.012 |
++------------------+-----------+
 
 

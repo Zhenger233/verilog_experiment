@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date                      : Sun Dec 15 13:00:08 2019
+| Date                      : Sun Dec 15 21:13:24 2019
 | Host                      : Zhenger running 64-bit major release  (build 9200)
 | Command                   : report_io -file v1_io_placed.rpt
 | Design                    : v1
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            51 |
+|            52 |
 +---------------+
 
 
@@ -196,7 +196,7 @@ Table of Contents
 | K15        |             | High Range | IO_L2P_T0_D02_14             | User IO     |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | K16        |             | High Range | IO_L2N_T0_D03_14             | User IO     |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | L1         |             |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
-| L2         |             | High Range | IO_L23N_T3_35                | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| L2         | beep        | High Range | IO_L23N_T3_35                | OUTPUT      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | L3         |             | High Range | IO_L23P_T3_35                | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | L4         |             | High Range | IO_L1P_T0_34                 | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | L5         |             | High Range | IO_0_34                      | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

@@ -130,7 +130,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports {led[2]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {led[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {led[0]}]
 
-
+set_property PACKAGE_PIN L2 [get_ports {beep}]
+set_property IOSTANDARD LVCMOS33 [get_ports {beep}]
 
 #set_property PACKAGE_PIN H2 [get_ports DAC_CS]
 #set_property PACKAGE_PIN H1 [get_ports DAC_WR]

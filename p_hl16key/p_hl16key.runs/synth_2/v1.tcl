@@ -33,6 +33,7 @@ set_property ip_repo_paths {
 set_property ip_output_repo c:/Users/Zhenger/Desktop/p_hl16key/p_hl16key.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
+  C:/Users/Zhenger/Desktop/p_hl16key/p_hl16key.srcs/sources_1/new/beep.v
   C:/Users/Zhenger/Desktop/p_hl16key/p_hl16key.srcs/sources_1/imports/new/divclk.v
   C:/Users/Zhenger/Desktop/p_hl16key/p_hl16key.srcs/sources_1/new/v_ajxd.v
   C:/Users/Zhenger/Desktop/p_hl16key/p_hl16key.srcs/sources_1/new/v_disp1.v
