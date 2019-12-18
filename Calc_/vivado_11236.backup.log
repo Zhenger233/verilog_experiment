@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue Dec 17 22:55:43 2019
+# Process ID: 11236
+# Current directory: D:/word/Tencent Files/2042712521/FileRecv/Calc_
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16068 D:\word\Tencent Files\2042712521\FileRecv\Calc_\Calc_.xpr
+# Log file: D:/word/Tencent Files/2042712521/FileRecv/Calc_/vivado.log
+# Journal file: D:/word/Tencent Files/2042712521/FileRecv/Calc_\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/word/Tencent Files/2042712521/FileRecv/Calc_/Calc_.xpr}
+INFO: [Project 1-313] Project file moved from 'D:/VIVADO_Projects/Calc_' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 822.848 ; gain = 116.422
+update_compile_order -fileset sources_1
+exit

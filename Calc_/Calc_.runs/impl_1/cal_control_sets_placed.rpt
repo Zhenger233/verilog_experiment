@@ -1,0 +1,81 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Wed Dec 18 11:42:38 2019
+| Host         : Zhenger running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file cal_control_sets_placed.rpt
+| Design       : cal
+| Device       : xc7a35ti
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    16 |
+| Unused register locations in slices containing registers |    47 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             102 |           38 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              82 |           22 |
+| Yes          | No                    | No                     |              52 |           35 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              69 |           45 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++-------------------+--------------------------+--------------------------+------------------+----------------+
+|    Clock Signal   |       Enable Signal      |     Set/Reset Signal     | Slice Load Count | Bel Load Count |
++-------------------+--------------------------+--------------------------+------------------+----------------+
+|  a/divclk_reg_n_0 |                          | a/an[5]_i_1_n_0          |                1 |              2 |
+| ~clk_ms_BUFG      | uut_ajxd/btn[11]_i_2_n_0 | uut_ajxd/btn[11]_i_1_n_0 |                1 |              4 |
+| ~clk_ms_BUFG      | uut_ajxd/btn[3]_i_2_n_0  | uut_ajxd/btn[3]_i_1_n_0  |                1 |              4 |
+| ~clk_ms_BUFG      | uut_ajxd/btn[7]_i_2_n_0  | uut_ajxd/btn[7]_i_1_n_0  |                1 |              4 |
+| ~clk_ms_BUFG      | uut_ajxd/btn[15]_i_2_n_0 | uut_ajxd/btn[15]_i_1_n_0 |                1 |              4 |
+|  a/divclk_reg_n_0 |                          | a/disp_bit_reg_n_0_[2]   |                1 |              4 |
+|  clk_IBUF_BUFG    |                          |                          |                3 |              6 |
+|  a/divclk_reg_n_0 |                          |                          |                3 |              7 |
+|  clk_IBUF_BUFG    |                          | a/divclk                 |                4 |             14 |
+|  clk_ms_BUFG      | showdat[23]_i_2_n_0      | showdat[23]_i_1_n_0      |               21 |             24 |
+|  clk_ms_BUFG      | flag[2]_i_1_n_0          | n1[23]_i_1_n_0           |               20 |             29 |
+|  clk_IBUF_BUFG    |                          | my_divclk/btnclk         |                8 |             31 |
+|  clk_IBUF_BUFG    |                          | my_divclk/clk_ms_0       |                8 |             31 |
+|  clk_20ms_BUFG    |                          |                          |               10 |             32 |
+|  clk_ms_BUFG      | flag[2]_i_1_n_0          |                          |               35 |             52 |
+|  clk_ms_BUFG      |                          |                          |               22 |             57 |
++-------------------+--------------------------+--------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 2      |                     1 |
+| 4      |                     5 |
+| 6      |                     1 |
+| 7      |                     1 |
+| 14     |                     1 |
+| 16+    |                     7 |
++--------+-----------------------+
+
+

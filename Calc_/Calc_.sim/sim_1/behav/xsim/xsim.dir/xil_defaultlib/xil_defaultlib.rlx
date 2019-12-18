@@ -1,0 +1,8 @@
+0.6
+2017.4
+Dec 15 2017
+21:07:18
+D:/VIVADO_Projects/Calc_/Calc_.sim/sim_1/behav/xsim/glbl.v,1513215259,verilog,,,,glbl,,,,,,,,
+D:/VIVADO_Projects/Calc_/Calc_.srcs/sources_1/new/design_2.v,1576591541,verilog,,,,Calculator_Dec;divclk;v_Calc,,,,,,,,
+D:/VIVADO_Projects/Calc_/Calc_.srcs/sources_1/new/v_ajxd.v,1529499897,verilog,,D:/VIVADO_Projects/Calc_/Calc_.srcs/sources_1/new/v_disp1.v,,v_ajxd,,,,,,,,
+D:/VIVADO_Projects/Calc_/Calc_.srcs/sources_1/new/v_disp1.v,1529294866,verilog,,D:/VIVADO_Projects/Calc_/Calc_.srcs/sources_1/new/design_2.v,,ip_disp,,,,,,,,
