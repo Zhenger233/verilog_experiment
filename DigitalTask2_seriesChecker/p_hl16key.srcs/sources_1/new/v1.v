@@ -9,14 +9,15 @@ module v1(input clk,input [11:0] sw,input [3:0] col,output [3:0] row,output [15:
  reg [3:0] flag=0;
  reg[4:0] i=0;
  reg [3:0]temp=0;
- reg music=0;
+ reg music,sound;
  parameter [51:0]num=52'h4101040608102;
 ip_disp a(.clk(clk),.rst(0),.dispdata(showdat),.seg(seg),.an(an));
-divclk my_divclk(.clk(clk),.clk_ms(clk_ms),.btnclk(clk_20ms));    //调用分频模块
+divclk my_divclk(.clk(clk),.clk_ms(clk_ms),.btnclk(clk_20ms));
 v_ajxd uut_ajxd(.clk(clk_ms),.btn_clk(clk_20ms),.col(col),.row(row),.btn_out(btnout));
-beep(music,clk,btnout,beep);
+beep bbb(sound,music,clk,btnout,beep);
 always @ (posedge clk_ms)
 begin
+    if(sw[0])sound=1;else sound=0;
     led[9:0]<=btnout[9:0];
     led[10]<=(btnout[15:10]==0?0:1);
     b1<=btnout;
@@ -27,10 +28,7 @@ begin
                 queue=(queue<<4)+i;
                 showdat=queue[19:0]; 
                 temp=(num>>(4*flag))%16;
-                if(i==temp)begin 
-                    flag=flag+1;
-                end
-                else flag=(i==2?1:0);
+                if(i==temp)flag=flag+1; else flag=(i==2?1:0);
                 showdat={flag,showdat[19:0]};
                 if(flag==13)begin led[11]=1;flag=0;music=1;end else begin led[11]=0; music=0;end
             end

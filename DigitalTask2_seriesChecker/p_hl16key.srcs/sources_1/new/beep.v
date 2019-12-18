@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module beep(input flag,input clk,input [15:0]key,output beep);
+module beep(input en,input flag,input clk,input [15:0]key,output beep);
 reg [20:0]ii,k,drivclk_cnt;
 reg beep;
 reg[22:0]i;reg clk_4hz;
@@ -28,6 +28,7 @@ reg[16:0]count,div_num;//
 reg[6:0]music;//justforatest;
     always @ (posedge clk )
     begin
+        
         casex(key)
         0:begin ii = 20'd500_000;k = 20'd0;end
         1:begin ii = 20'd191_130;k = 20'd95_565;end
@@ -52,14 +53,17 @@ reg[6:0]music;//justforatest;
     
     always @ (posedge clk)
     begin
-        if(flag)begin 
-            if(count==div_num)
-            begin count<=0;beep=~beep;end
-            else count<=count+1'b1;
+    if(en)begin
+            if(flag)begin 
+                if(count==div_num)
+                begin count<=0;beep=~beep;end
+                else count<=count+1'b1;
+            end
+            else beep<=(drivclk_cnt<k?1'b1:1'b0);
         end
-        else beep<=(drivclk_cnt<k?1'b1:1'b0);
+       else beep<=0;
     end
-//module beyond(input clk,output beep);
+//module music(input clk,output beep);
 
 always @ (posedge clk)//4hz
 begin
@@ -73,7 +77,7 @@ end
 
 always@(posedge clk_4hz)
 begin
-if(music==7'd90)////////////////////notice
+if(music==7'd99)////////////////////notice
 music<=0;else
 music<=music+1'b1;
 end
@@ -103,96 +107,105 @@ H6=17'h377d,
 H7=17'h316f;
 always@(posedge clk_4hz)begin
 case(music)
-7'd0:div_num=M7;
-7'd1:div_num=M7;
-7'd2:div_num=H1;
-7'd3:div_num=H1;
-7'd4:div_num=H2;
-7'd5:div_num=H2;
-7'd6:div_num=H2;
-7'd7:div_num=H3;
-7'd8:div_num=H3;
-7'd9:div_num=H3;
-7'd10:div_num=H3;
-7'd11:div_num=H2;
-7'd12:div_num=H2;
-7'd13:div_num=H2;
-7'd14:div_num=H2;
-7'd15:div_num=H2;
-7'd16:div_num=H1;
-7'd17:div_num=M7;
-7'd18:div_num=M5;
-7'd19:div_num=M6;
-7'd20:div_num=M6;
-7'd21:div_num=M6;
-7'd22:div_num=M3;
-7'd23:div_num=M2;
-7'd24:div_num=M3;
-7'd25:div_num=M3;
-7'd26:div_num=M3;
-7'd27:div_num=M3;
-7'd28:div_num=M5;
-7'd29:div_num=M5;
-7'd30:div_num=M5;
-7'd31:div_num=M6;
-7'd32:div_num=M6;
-7'd33:div_num=M6;
-7'd34:div_num=H1;
-7'd35:div_num=M7;
-7'd36:div_num=H1;
-7'd37:div_num=H1;
-7'd38:div_num=H7;
-7'd39:div_num=H7;
-7'd40:div_num=H1;
-7'd41:div_num=H1;
-7'd42:div_num=H1;
-7'd43:div_num=H1;//repeat
-7'd44:div_num=M7;
+7'd0:div_num=L5;
+7'd1:div_num=L6;
+7'd2:div_num=L5;
+7'd3:div_num=L4;
+7'd4:div_num=L3;
+7'd5:div_num=L2;
+7'd6:div_num=L1;
+7'd7:div_num=L5;
+7'd8:div_num=L1;
+7'd9:div_num=L3;
+7'd10:div_num=L1;
+7'd11:div_num=L7;
+7'd12:div_num=L6;
+7'd13:div_num=L3;
+7'd14:div_num=L5;
+7'd15:div_num=L5;
+7'd16:div_num=L6;
+7'd17:div_num=L7;
+7'd18:div_num=L7;
+7'd19:div_num=L6;
+7'd20:div_num=L5;
+7'd21:div_num=L5;
+7'd22:div_num=L4;
+7'd23:div_num=L3;
+7'd24:div_num=L2;
+7'd25:div_num=L6;
+7'd26:div_num=L7;
+7'd27:div_num=L6;
+7'd28:div_num=L5;
+7'd29:div_num=L5;
+7'd30:div_num=L1;
+7'd31:div_num=L2;
+7'd32:div_num=L3;
+7'd33:div_num=L3;
+7'd34:div_num=M5;
+7'd35:div_num=M6;
+7'd36:div_num=M5;
+7'd37:div_num=M4;
+7'd38:div_num=M3;
+7'd39:div_num=M2;
+7'd40:div_num=M1;
+7'd41:div_num=M5;
+7'd42:div_num=M1;
+7'd43:div_num=M3;//repeat
+7'd44:div_num=M1;
 7'd45:div_num=M7;
-7'd46:div_num=H1;
-7'd47:div_num=H1;
-7'd48:div_num=H2;
-7'd49:div_num=H2;
-7'd50:div_num=H2;
-7'd51:div_num=H3;
-7'd52:div_num=H3;
-7'd53:div_num=H3;
-7'd54:div_num=H3;
-7'd55:div_num=H2;
-7'd56:div_num=H2;
-7'd57:div_num=H2;
-7'd58:div_num=H2;
-7'd59:div_num=H2;
-7'd60:div_num=H1;
-7'd61:div_num=M7;
-7'd62:div_num=H1;
+7'd46:div_num=M2;
+7'd47:div_num=M1;
+7'd48:div_num=M6;
+7'd49:div_num=M6;
+7'd50:div_num=M1;
+7'd51:div_num=M7;
+7'd52:div_num=M6;
+7'd53:div_num=M5;
+7'd54:div_num=M6;
+7'd55:div_num=M5;
+7'd56:div_num=M4;
+7'd57:div_num=M7;
+7'd58:div_num=M6;
+7'd59:div_num=M5;
+7'd60:div_num=M2;
+7'd61:div_num=M1;
+7'd62:div_num=M1;
 7'd63:div_num=H1;
-7'd64:div_num=M7;
-7'd65:div_num=M7;
-7'd66:div_num=M7;
-7'd67:div_num=M7;
-7'd68:div_num=M3;
-7'd69:div_num=M2;
-7'd70:div_num=M3;
-7'd71:div_num=M3;
-7'd72:div_num=M3;
-7'd73:div_num=M3;
-7'd74:div_num=M5;
-7'd75:div_num=M5;
-7'd76:div_num=M5;
-7'd77:div_num=M6;
-7'd78:div_num=M6;
-7'd79:div_num=M6;
-7'd80:div_num=L5;
-7'd81:div_num=L6;
-7'd82:div_num=M1;
-7'd83:div_num=M2;
-7'd84:div_num=M3;
-7'd85:div_num=M5;
-7'd86:div_num=H1;
-7'd87:div_num=H1;
-7'd88:div_num=H1;
-7'd89:div_num=H1;
+7'd64:div_num=H2;
+7'd65:div_num=H3;
+7'd66:div_num=H2;
+7'd67:div_num=H1;
+7'd68:div_num=H6;
+7'd69:div_num=H7;
+7'd70:div_num=H6;
+7'd71:div_num=H3;
+7'd72:div_num=H5;
+7'd73:div_num=H5;
+7'd74:div_num=H1;
+7'd75:div_num=H2;
+7'd76:div_num=H3;
+7'd77:div_num=H2;
+7'd78:div_num=H1;
+7'd79:div_num=H6;
+7'd80:div_num=H7;
+7'd81:div_num=H5;
+7'd82:div_num=H3;
+7'd83:div_num=H6;
+7'd84:div_num=H6;
+7'd85:div_num=H5;
+7'd86:div_num=H4;
+7'd87:div_num=H3;
+7'd88:div_num=H2;
+7'd89:div_num=H7;
+7'd90:div_num=H6;
+7'd91:div_num=H6;
+7'd92:div_num=H5;
+7'd93:div_num=H3;
+7'd94:div_num=H4;
+7'd95:div_num=H2;
+7'd96:div_num=H1;
+7'd97:div_num=H1;
+7'd98:div_num=H1;
 endcase
 end
 

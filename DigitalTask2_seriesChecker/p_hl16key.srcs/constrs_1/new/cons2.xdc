@@ -77,8 +77,8 @@ set_property PACKAGE_PIN M14 [get_ports {seg[6]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {seg[6]}]
 set_property PACKAGE_PIN L13 [get_ports {seg[7]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {seg[7]}]
-    set_property PACKAGE_PIN V7 [get_ports dp]
-        set_property IOSTANDARD LVCMOS33 [get_ports dp]
+set_property PACKAGE_PIN V7 [get_ports dp]
+set_property IOSTANDARD LVCMOS33 [get_ports dp]
 
 set_property PACKAGE_PIN G12 [get_ports {an[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {an[0]}]
@@ -130,6 +130,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports {led[2]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {led[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {led[0]}]
 
+#beep
 set_property PACKAGE_PIN L2 [get_ports {beep}]
 set_property IOSTANDARD LVCMOS33 [get_ports {beep}]
 

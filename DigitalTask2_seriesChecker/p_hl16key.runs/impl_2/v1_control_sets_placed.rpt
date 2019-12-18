@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Sun Dec 15 21:13:24 2019
+| Date         : Mon Dec 16 20:51:18 2019
 | Host         : Zhenger running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file v1_control_sets_placed.rpt
 | Design       : v1
@@ -23,7 +23,7 @@ Table of Contents
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
 | Number of unique control sets                            |    19 |
-| Unused register locations in slices containing registers |    58 |
+| Unused register locations in slices containing registers |    64 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,41 +33,41 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             130 |           58 |
+| No           | No                    | No                     |             140 |           54 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |             125 |           35 |
-| Yes          | No                    | No                     |              28 |           19 |
+| Yes          | No                    | No                     |              28 |           16 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              51 |           24 |
+| Yes          | Yes                   | No                     |              51 |           21 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 3. Detailed Control Set Information
 -----------------------------------
 
-+---------------------------------+--------------------------+--------------------------+------------------+----------------+
-|           Clock Signal          |       Enable Signal      |     Set/Reset Signal     | Slice Load Count | Bel Load Count |
-+---------------------------------+--------------------------+--------------------------+------------------+----------------+
-|  a/divclk_reg_n_0               |                          | a/an[5]_i_1_n_0          |                1 |              2 |
-| ~clk_ms_BUFG                    | uut_ajxd/btn[7]_i_2_n_0  | uut_ajxd/btn[7]_i_1_n_0  |                1 |              4 |
-| ~clk_ms_BUFG                    | uut_ajxd/btn[15]_i_2_n_0 | uut_ajxd/btn[15]_i_1_n_0 |                1 |              4 |
-| ~clk_ms_BUFG                    | uut_ajxd/btn[3]_i_2_n_0  | uut_ajxd/btn[3]_i_1_n_0  |                1 |              4 |
-| ~clk_ms_BUFG                    | uut_ajxd/btn[11]_i_2_n_0 | uut_ajxd/btn[11]_i_1_n_0 |                1 |              4 |
-|  a/divclk_reg_n_0               |                          | a/disp_bit_reg_n_0_[2]   |                2 |              4 |
-|  nolabel_line17/clk_4hz_reg_n_0 |                          |                          |                3 |              7 |
-|  a/divclk_reg_n_0               |                          |                          |                4 |              7 |
-|  clk_IBUF_BUFG                  |                          | a/divclk                 |                4 |             14 |
-|  clk_IBUF_BUFG                  | led_OBUF[11]             | nolabel_line17/count     |                5 |             17 |
-|  clk_ms_BUFG                    | showdat                  | flag[3]_i_1_n_0          |               15 |             18 |
-|  clk_IBUF_BUFG                  |                          | nolabel_line17/clear     |                6 |             21 |
-|  clk_IBUF_BUFG                  |                          | nolabel_line17/clk_4hz   |                6 |             22 |
-|  clk_ms_BUFG                    | showdat                  |                          |               19 |             28 |
-|  clk_IBUF_BUFG                  |                          | my_divclk/btnclk         |                8 |             31 |
-|  clk_IBUF_BUFG                  |                          | my_divclk/clk_ms_0       |                8 |             31 |
-|  clk_20ms_BUFG                  |                          |                          |               10 |             32 |
-|  clk_IBUF_BUFG                  |                          |                          |               18 |             36 |
-|  clk_ms_BUFG                    |                          |                          |               23 |             48 |
-+---------------------------------+--------------------------+--------------------------+------------------+----------------+
++----------------------+--------------------------+--------------------------+------------------+----------------+
+|     Clock Signal     |       Enable Signal      |     Set/Reset Signal     | Slice Load Count | Bel Load Count |
++----------------------+--------------------------+--------------------------+------------------+----------------+
+|  a/divclk_reg_n_0    |                          | a/an[5]_i_1_n_0          |                2 |              2 |
+|  a/divclk_reg_n_0    |                          | a/disp_bit_reg_n_0_[2]   |                1 |              4 |
+| ~clk_ms_BUFG         | uut_ajxd/btn[11]_i_2_n_0 | uut_ajxd/btn[11]_i_1_n_0 |                1 |              4 |
+| ~clk_ms_BUFG         | uut_ajxd/btn[15]_i_2_n_0 | uut_ajxd/btn[15]_i_1_n_0 |                1 |              4 |
+| ~clk_ms_BUFG         | uut_ajxd/btn[7]_i_2_n_0  | uut_ajxd/btn[7]_i_1_n_0  |                1 |              4 |
+| ~clk_ms_BUFG         | uut_ajxd/btn[3]_i_2_n_0  | uut_ajxd/btn[3]_i_1_n_0  |                1 |              4 |
+|  bbb/clk_4hz_reg_n_0 |                          |                          |                2 |              7 |
+|  a/divclk_reg_n_0    |                          |                          |                2 |              7 |
+|  clk_IBUF_BUFG       |                          | a/divclk                 |                4 |             14 |
+|  clk_IBUF_BUFG       | bbb/count                | bbb/count[0]_i_1_n_0     |                5 |             17 |
+|  clk_ms_BUFG         | showdat                  | flag[3]_i_1_n_0          |               12 |             18 |
+|  clk_IBUF_BUFG       |                          | bbb/clear                |                6 |             21 |
+|  clk_IBUF_BUFG       |                          | bbb/clk_4hz              |                6 |             22 |
+|  clk_ms_BUFG         | showdat                  |                          |               16 |             28 |
+|  clk_IBUF_BUFG       |                          | my_divclk/btnclk         |                8 |             31 |
+|  clk_IBUF_BUFG       |                          | my_divclk/clk_ms_0       |                8 |             31 |
+|  clk_20ms_BUFG       |                          |                          |                9 |             32 |
+|  clk_IBUF_BUFG       |                          |                          |               20 |             45 |
+|  clk_ms_BUFG         |                          |                          |               21 |             49 |
++----------------------+--------------------------+--------------------------+------------------+----------------+
 
 
 +--------+-----------------------+
