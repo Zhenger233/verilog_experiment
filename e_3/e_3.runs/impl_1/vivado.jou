@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Nov 26 13:38:59 2020
+# Process ID: 14180
+# Current directory: D:/project/vvd/e_3/e_3.runs/impl_1
+# Command line: vivado.exe -log e_3.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source e_3.tcl -notrace
+# Log file: D:/project/vvd/e_3/e_3.runs/impl_1/e_3.vdi
+# Journal file: D:/project/vvd/e_3/e_3.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source e_3.tcl -notrace
