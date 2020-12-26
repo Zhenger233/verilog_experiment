@@ -1,0 +1,10 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+D:/project/vvd/e_8/e_8.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+D:/project/vvd/e_8/e_8.srcs/sim_1/new/sim8.v,1608915552,verilog,,,,sim8,,,,,,,,
+D:/project/vvd/e_8/e_8.srcs/sources_1/new/ajxd.v,1608917156,verilog,,D:/project/vvd/e_8/e_8.srcs/sources_1/new/chessClock.v,,ajxd,,,,,,,,
+D:/project/vvd/e_8/e_8.srcs/sources_1/new/chessClock.v,1608812446,verilog,,D:/project/vvd/e_8/e_8.srcs/sources_1/new/div_clk.v,,chessClock,,,,,,,,
+D:/project/vvd/e_8/e_8.srcs/sources_1/new/div_clk.v,1608812847,verilog,,D:/project/vvd/e_8/e_8.srcs/sources_1/new/dynamic_led6_point6.v,,div_clk,,,,,,,,
+D:/project/vvd/e_8/e_8.srcs/sources_1/new/dynamic_led6_point6.v,1608806285,verilog,,D:/project/vvd/e_8/e_8.srcs/sim_1/new/sim8.v,,dynamic_led6,,,,,,,,

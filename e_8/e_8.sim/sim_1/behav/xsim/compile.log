@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/project/vvd/e_8/e_8.srcs/sources_1/new/ajxd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ajxd
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/project/vvd/e_8/e_8.srcs/sources_1/new/chessClock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module chessClock
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/project/vvd/e_8/e_8.srcs/sources_1/new/div_clk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div_clk
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/project/vvd/e_8/e_8.srcs/sources_1/new/dynamic_led6_point6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dynamic_led6
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/project/vvd/e_8/e_8.srcs/sim_1/new/sim8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim8
